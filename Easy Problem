@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class WrapperExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(10); // Autoboxing
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        
+        int sum = calculateSum(numbers);
+        System.out.println("Sum of numbers: " + sum);
+        
+        String numStr = "50";
+        Integer parsedNumber = Integer.parseInt(numStr); 
+        System.out.println("Parsed number: " + parsedNumber);
+    }
+
+    public static int calculateSum(List<Integer> numbers) {
+        int sum = 0;
+        for (Integer num : numbers) {
+            sum += num; // Unboxing
+        }
+        return sum;
+    }
+}
